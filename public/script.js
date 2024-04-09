@@ -14,9 +14,10 @@ const draw_frame = () => {
    requestAnimationFrame (draw_frame)
 }
 
-draw_frame ()
+requestAnimationFrame(draw_frame)
 
 window.onresize = () => {
    cnv.width = innerWidth
    cnv.height = innerHeight   
 }
+
