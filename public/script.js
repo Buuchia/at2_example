@@ -33,7 +33,7 @@ function draw_squares (start_size) {
 //requestAnimationFrame(draw_squares)
 
 function rand_col () {
-   return 'hsl(${ Math.random () *360 }, 50%, 50%)'
+   return 'hsl(${ Math.random () * 360 }, 50%, 50%)'
 }
 
 window.onresize = () => {
