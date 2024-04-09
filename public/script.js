@@ -7,7 +7,8 @@ cnv.height = innerHeight
 
 const ctx = cnv.getContext (`2d`)
 //draw the background
-ctx.strokeRect (0, 0, innerWidth, innerHeight)
+//ctx.strokeRect (0, 0, innerWidth, innerHeight)
+ctx.fillRect = `turquoise`
 
 requestAnimationFrame(draw_square)
 
