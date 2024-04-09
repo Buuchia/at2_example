@@ -27,10 +27,10 @@ function draw_squares (start_size) {
    }
 
    //call the next frame
-   requestAnimationFrame (draw_squares)
+   //requestAnimationFrame (draw_squares)
 }
 
-requestAnimationFrame(draw_squares)
+//requestAnimationFrame(draw_squares)
 
 function rand_col () {
    return 'hsl(${ Math.random () *360 }, 50%, 50%)'
