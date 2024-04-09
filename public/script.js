@@ -10,7 +10,6 @@ const ctx = cnv.getContext (`2d`)
 //ctx.strokeRect (0, 0, innerWidth, innerHeight)
 ctx.fillRect = `turquoise`
 
-requestAnimationFrame(draw_square)
 
 function draw_square (size) {
    //draw the square
@@ -31,6 +30,7 @@ function draw_squares (start_size) {
    requestAnimationFrame (draw_squares)
 }
 
+requestAnimationFrame(draw_squares)
 
 function rand_col () {
    return 'hsl(${ Math.random () *360 }, 50%, 50%)'
