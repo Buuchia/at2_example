@@ -6,21 +6,30 @@ cnv.width = innerWidth
 cnv.height = innerHeight
 
 const ctx = cnv.getContext (`2d`)
+//draw the background
+ctx.strokeRect (0, 0, innerWidth, innerHeight)
 
-requestAnimationFrame(draw_frame)
+requestAnimationFrame(draw_square)
 
-const draw_frame = () => {
-   //draw the background
-   ctx.fillStyle = rand_col ()
-   ctx.fillRect (0, 0, innerWidth, innerHeight)
-
+function draw_square (size) {
    //draw the square
-   ctx.fillStyle = 'tomato'
-   ctx.fillRect = (x, y, size, size)
+   const x = cnv.width / 2 - size / 2
+   const y = cnv.height / 2 - size / 2
+   ctx.fillStyle = rand_col ()
+   ctx.fillRect = (x, y, 50, 50)
+}
+
+function draw_squares (start_size) {
+   draw_square (start_size)
+
+   if (start_size > 0) {
+      draw_squares (start_size - 20)
+   }
 
    //call the next frame
-   requestAnimationFrame (draw_frame)
+   requestAnimationFrame (draw_squares)
 }
+
 
 function rand_col () {
    return 'hsl(${ Math.random () *360 }, 50%, 50%)'
