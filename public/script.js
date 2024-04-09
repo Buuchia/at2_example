@@ -15,7 +15,7 @@ function draw_square (size) {
    //draw the square
    const x = cnv.width / 2 - size / 2
    const y = cnv.height / 2 - size / 2
-   ctx.fillStyle = rand_col ()
+   ctx.fillStyle = `turquoise`
    ctx.fillRect = (x, y, 50, 50)
 }
 
