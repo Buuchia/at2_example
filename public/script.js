@@ -3,12 +3,12 @@ document.body.style.overflow = `hidden`
 
 const cnv = document.getElementById (`cnv_element`)
 cnv.width = innerWidth
-cnv.height = innerHeight
+cnv.height = cnv.width * 9 / 16
 
 const ctx = cnv.getContext (`2d`)
 //draw the background
 ctx.fillRect (0, 0, innerWidth, innerHeight)
-ctx.fillStyle = `turquoise`
+ctx.fillStyle = rand_col ()
 
 
 function draw_square (size) {
