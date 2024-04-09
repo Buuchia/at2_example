@@ -7,7 +7,7 @@ cnv.height = cnv.width * 9 / 16
 
 const ctx = cnv.getContext (`2d`)
 //draw the background
-ctx.fillRect (0, 0, innerWidth, innerHeight)
+ctx.fillRect (0, 0, innerWidth, cnv.height)
 ctx.fillStyle = rand_col ()
 
 
@@ -38,6 +38,6 @@ function rand_col () {
 
 window.onresize = () => {
    cnv.width = innerWidth
-   cnv.height = innerHeight   
+   cnv.height = cnv.height   
 }
 
